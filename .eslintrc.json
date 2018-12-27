@@ -15,5 +15,8 @@
     "import/core-modules": [ "phaser" ],
     "import/parser": "webpack",
     "import/resolver": { "webpack": {} }
+  },
+  "rules": {
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true}]
   }
 }

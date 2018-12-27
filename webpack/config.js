@@ -34,7 +34,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../index.ejs'),
-      title: appHtmlTitle
+      title: appHtmlTitle,
+      minify: false
     })
   ],
   module: {
@@ -46,7 +47,7 @@ module.exports = {
         include: dirApp,
         exclude: dirNode,
         options: {
-          compact: true
+          compact: false
         }
       },
       // STYLES
