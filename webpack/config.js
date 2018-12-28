@@ -8,6 +8,7 @@ const IS_DEV = (process.env.NODE_ENV === 'dev')
 const dirNode = path.join(__dirname, '../node_modules')
 const dirApp = path.join(__dirname, '../src')
 const dirAssets = path.join(__dirname, '../assets')
+const scenesApp = path.join(__dirname, '../src/scenes')
 
 const appHtmlTitle = 'Webpack4 Phaser3 Boilerplate'
 
@@ -94,6 +95,16 @@ module.exports = {
         exclude: dirNode,
         options: {
           name: '[path][name].[ext]'
+        }
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        loader: 'file-loader',
+        include: scenesApp,
+        exclude: dirNode,
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'images'
         }
       },
       // RAW
