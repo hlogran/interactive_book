@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import { Logo } from '../images'
+import { Bg } from '../images'
 import { Mushroom } from '../sprites'
 
 export default class extends Phaser.Scene {
@@ -8,33 +9,32 @@ export default class extends Phaser.Scene {
   }
 
   create () {
-    this.logo = new Logo(this, this.sys.canvas.width / 2, this.sys.canvas.height / 2);
 
-    console.log('this.logo.displayHeight', this.logo.displayHeight);
-    console.log('this.logo.scaleY', this.logo.scaleY);
 
-    this.logo.displayHeight = this.sys.canvas.height;
-    this.logo.scaleX = this.logo.scaleY;
+    this.container = this.add.container(this.sys.canvas.width / 2, this.sys.canvas.height / 2);
 
-    console.log('this.logo.displayHeight', this.logo.displayHeight);
-    console.log('this.logo.scaleY', this.logo.scaleY);
-    console.log('this.logo.scaleY', this.logo.scaleY);
+    this.bg = new Bg(this, 0, 0);
+    this.bg.displayHeight = this.sys.canvas.height;
+    this.bg.scaleX = this.bg.scaleY;
+    this.container.add(this.bg);
+
     /*
-    this.tweens.add({
-      targets: this.logo,
-      scaleX: 1.5,
-      scaleY: 1.5,
-      duration: 2000,
-      ease: 'Power2',
-      yoyo: true,
-      loop: -1
-    })
+    this.container.add(this.logo);
+
+    this.events.on('resize', (w, h) => {
+      this.container.setPosition(w / 2, h / 2);
+      this.container.displayHeight = h;
+
+      this.container.scaleX = this.container.scaleY;
+
+      console.log(this.container.getBoundsTransformMatrix());
+
+    }, this);
     */
-    this.mushroom = new Mushroom(this, 0, 0)
-    Phaser.Display.Align.In.Center(this.mushroom, this.add.zone(400, 300, 800, 600))
   }
 
+
   update () {
-    this.mushroom.update()
+    //this.mushroom.update()
   }
 }

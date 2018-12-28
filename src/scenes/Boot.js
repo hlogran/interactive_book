@@ -1,10 +1,11 @@
-import Phaser from 'phaser'
-import logo from 'images/logo.png'
-import mushroom from 'images/mushroom2.png'
+import Phaser from 'phaser';
+import logo from 'images/logo.png';
+import mushroom from 'images/mushroom2.png';
+import bg from 'images/bg.png';
 
 export default class extends Phaser.Scene {
   constructor () {
-    super({ key: 'Boot' })
+    super({ key: 'Boot' });
   }
 
   preload () {
@@ -16,8 +17,9 @@ export default class extends Phaser.Scene {
       progress.fillRect(700 - (value * 600), 250, value * 600, 100)
     })
 
-    this.load.image('logo', logo)
-    this.load.image('mushroom', mushroom)
+    this.load.image('logo', logo);
+    this.load.image('mushroom', mushroom);
+    this.load.image('bg', bg);
   }
 
   create () {
