@@ -1,24 +1,24 @@
 import Phaser from 'phaser';
-import { bg } from '../images';
+import { Scene } from '../../ibFramework';
+//import bgAsset from './assets/images/bg.png';
+import { bg } from './images';
+const KEY = '001';
 
-export default class extends Phaser.Scene {
+export default class extends Scene {
   constructor () {
-    super({ key: 'scene_001' })
+    super('001');
   }
 
   preload () {
-    const progress = this.add.graphics()
+    const progress = this.add.graphics();
 
     this.load.on('fileprogress', (file, value) => {
-      progress.clear()
-      progress.fillStyle(0xffffff, 0.75)
-      progress.fillRect(700 - (value * 600), 250, value * 600, 100)
-    })
+      progress.clear();
+      progress.fillStyle(0xffffff, 0.75);
+      progress.fillRect(700 - (value * 600), 250, value * 600, 100);
+    });
 
-    this.load.image('logo', logo);
-    this.load.image('mushroom', mushroom);
-    this.load.image('bg', bg);
-    this.load.image('bg1', bg1);
+    this.loadImage('bg', bgAsset);
   }
 
   create () {
@@ -26,7 +26,7 @@ export default class extends Phaser.Scene {
 
     this.container = this.add.container(this.sys.canvas.width / 2, this.sys.canvas.height / 2);
 
-    this.bg = new Bg(this, 0, 0);
+    this.bg = new bg(this, 0, 0);
     this.bg.displayHeight = this.sys.canvas.height;
     this.bg.scaleX = this.bg.scaleY;
     this.container.add(this.bg);

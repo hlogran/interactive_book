@@ -1,7 +1,6 @@
 import Phaser from 'phaser';
 import logo from 'images/logo.png';
 import mushroom from 'images/mushroom2.png';
-import _001_bg from 'images/001/bg.png';
 
 export default class extends Phaser.Scene {
   constructor () {

@@ -1,8 +1,8 @@
-import Phaser from 'phaser';
+import { Image } from '../../../ibFramework';
 
-export default class extends Phaser.GameObjects.Image {
+export default class extends Image {
   constructor (scene, x, y) {
-    super(scene, x, y, 'logo');
+    super(scene, x, y, 'bg');
     scene.add.existing(this);
   }
 }

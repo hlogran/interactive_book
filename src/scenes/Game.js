@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
 import { Logo } from '../images'
-import { Bg } from '../images'
+//import { Bg } from '../images'
 import { Mushroom } from '../sprites'
 
 export default class extends Phaser.Scene {
@@ -38,3 +38,4 @@ export default class extends Phaser.Scene {
     //this.mushroom.update()
   }
 }
+

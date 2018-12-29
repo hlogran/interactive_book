@@ -103,8 +103,9 @@ module.exports = {
         include: scenesApp,
         exclude: dirNode,
         options: {
-          name: '[name].[ext]',
-          outputPath: 'images'
+          name: '[path][name].[ext]',
+          context: 'src',
+          outputPath: 'assets'
         }
       },
       // RAW
