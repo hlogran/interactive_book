@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { Scene } from '../../ibFramework';
 import * as images from './assets/images';
 import { bg } from './images';
+import { mar } from './animations';
 
 const KEY = '001';
 
@@ -14,10 +15,10 @@ export default class extends Scene {
 
 
     this.container = this.add.container(this.sys.canvas.width / 2, this.sys.canvas.height / 2);
-    this.bg = new bg(this, 0, 0);
-    this.bg.displayHeight = this.sys.canvas.height;
-    this.bg.scaleX = this.bg.scaleY;
-    this.container.add(this.bg);
+    this.mar = new mar(this, 0, 0);
+    this.mar.displayHeight = this.sys.canvas.height;
+    this.mar.scaleX = this.mar.scaleY;
+    this.container.add(this.mar);
 
     /*
     this.container.add(this.logo);
