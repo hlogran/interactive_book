@@ -1,31 +1,19 @@
 import Phaser from 'phaser';
 import { Scene } from '../../ibFramework';
-//import bgAsset from './assets/images/bg.png';
+import * as images from './assets/images';
 import { bg } from './images';
+
 const KEY = '001';
 
 export default class extends Scene {
   constructor () {
-    super('001');
-  }
-
-  preload () {
-    const progress = this.add.graphics();
-
-    this.load.on('fileprogress', (file, value) => {
-      progress.clear();
-      progress.fillStyle(0xffffff, 0.75);
-      progress.fillRect(700 - (value * 600), 250, value * 600, 100);
-    });
-
-    this.loadImage('bg', bgAsset);
+    super(KEY, images);
   }
 
   create () {
 
 
     this.container = this.add.container(this.sys.canvas.width / 2, this.sys.canvas.height / 2);
-
     this.bg = new bg(this, 0, 0);
     this.bg.displayHeight = this.sys.canvas.height;
     this.bg.scaleX = this.bg.scaleY;
