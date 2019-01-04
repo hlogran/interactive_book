@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "mar.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1280,
+				"h": 1440
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "mar001.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1280,
+						"h": 720
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1280,
+						"h": 720
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 1280,
+						"h": 720
+					}
+				},
+				{
+					"filename": "mar002.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1280,
+						"h": 720
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1280,
+						"h": 720
+					},
+					"frame": {
+						"x": 0,
+						"y": 720,
+						"w": 1280,
+						"h": 720
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:a91e0f1b76ecc6da16e28b26983e1299:17eec3cbe83c4eb240541cd77b48a298:58fd39fb7b7d55d5e3416dbfb0a8082a$"
+	}
+}
