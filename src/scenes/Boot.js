@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import logo from 'images/logo.png';
-import mushroom from 'images/mushroom2.png';
+//import mushroom from 'images/mushroom2.png';
 
 export default class extends Phaser.Scene {
   constructor () {
@@ -17,7 +17,7 @@ export default class extends Phaser.Scene {
     })
 
     this.load.image('logo', logo);
-    this.load.image('mushroom', mushroom);
+    //this.load.image('mushroom', mushroom);
     this.load.image('bg', bg);
     this.load.image('bg1', bg1);
   }

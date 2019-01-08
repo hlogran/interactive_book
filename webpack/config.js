@@ -108,6 +108,21 @@ module.exports = {
           outputPath: 'assets'
         }
       },
+      //JSON
+      {
+        type: 'javascript/auto',
+        test: /\.json$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              context: 'src',
+              outputPath: 'assets'
+            }
+          }
+        ]
+      },
       // RAW
       {
         test: [ /\.vert$/, /\.frag$/ ],

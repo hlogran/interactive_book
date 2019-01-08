@@ -2,23 +2,24 @@ import Phaser from 'phaser';
 import { Scene } from '../../ibFramework';
 import * as images from './assets/images';
 import { bg } from './images';
-import { mar } from './animations';
+import { sea } from './animations';
+import atlas from './assets/images/atlas.json';
 
 const KEY = '001';
 
 export default class extends Scene {
   constructor () {
-    super(KEY, images);
+    super(KEY, atlas);
   }
 
   create () {
 
-
     this.container = this.add.container(this.sys.canvas.width / 2, this.sys.canvas.height / 2);
-    this.mar = new mar(this, 0, 0);
-    this.mar.displayHeight = this.sys.canvas.height;
-    this.mar.scaleX = this.mar.scaleY;
-    this.container.add(this.mar);
+    this.sea = new sea(this, 0, 0);
+    this.sea.displayHeight = this.sys.canvas.height;
+    this.sea.scaleX = this.sea.scaleY;
+    this.container.add(this.sea);
+    sea.play('idle');
 
     /*
     this.container.add(this.logo);

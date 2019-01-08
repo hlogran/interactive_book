@@ -1,10 +1,10 @@
 import Phaser from 'phaser';
 
 export default class extends Phaser.Scene {
-  constructor (key, images) {
+  constructor (key, atlas) {
     super({ key: key });
     this.key = key;
-    this.images = images;
+    this.atlas = atlas;
   }
 
   preload () {
@@ -15,11 +15,14 @@ export default class extends Phaser.Scene {
       progress.fillStyle(0xffffff, 0.75);
       progress.fillRect(700 - (value * 600), 250, value * 600, 100);
     });
-
+    /*
     Object.keys(this.images).forEach((key, index) => {
       this.loadImage(key, this.images[key]);
       console.log(key);
     });
+    */
+    console.log('atlas', this.atlas);
+    this.load.multiatlas('atlas', this.atlas);
   }
 
   loadImage (key, path) {

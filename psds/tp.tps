@@ -132,7 +132,7 @@
             <key>json</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>../src/scenes/001/assets/images/atlas.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -149,7 +149,7 @@
             <string></string>
         </struct>
         <key>autoAliasEnabled</key>
-        <false/>
+        <true/>
         <key>trimSpriteNames</key>
         <false/>
         <key>prependSmartFolderName</key>
@@ -163,7 +163,7 @@
             <key>scaleMode</key>
             <enum type="ScaleMode">Smooth</enum>
             <key>extrude</key>
-            <uint>0</uint>
+            <uint>1</uint>
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMargin</key>
@@ -181,8 +181,12 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../src/scenes/001/assets/images/mar001.png</key>
-            <key type="filename">../src/scenes/001/assets/images/mar002.png</key>
+            <key type="filename">scenes_pngs/001/ball/idle/0001.png</key>
+            <key type="filename">scenes_pngs/001/ball/idle/0002.png</key>
+            <key type="filename">scenes_pngs/001/ball/idle/0003.png</key>
+            <key type="filename">scenes_pngs/001/ball/idle/0004.png</key>
+            <key type="filename">scenes_pngs/001/sea/idle/0001.png</key>
+            <key type="filename">scenes_pngs/001/sea/idle/0002.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -198,8 +202,7 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../src/scenes/001/assets/images/mar002.png</filename>
-            <filename>../src/scenes/001/assets/images/mar001.png</filename>
+            <filename>scenes_pngs/001</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -1,1 +1,1 @@
-export { default as mar } from './mar';
+export { default as sea } from './sea';
