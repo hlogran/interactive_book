@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { Boot, Game, Scene_001 } from 'scenes';
+import { scene_001 } from 'scenes';
 
 const getNewGameSize = () => {
   const minRatio = 4 / 3;
@@ -28,18 +28,8 @@ const config = {
   width: newSize.w,
   height: newSize.h,
   scene: [
-    Scene_001
-    //Boot,
-    //Game
+    scene_001
   ]
 };
 
-
 const game = new Phaser.Game(config);
-
-/*
-window.addEventListener('resize', () => {
-  const newSize = getNewGameSize();
-  game.resize(newSize.w, newSize.h);
-});
-*/

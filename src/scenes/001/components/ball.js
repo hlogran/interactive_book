@@ -2,30 +2,27 @@ import Phaser from 'phaser';
 
 export default class extends Phaser.GameObjects.Sprite {
   constructor (scene, x, y) {
-
-    console.log('exists', scene.load.cacheManager /*.keyExists('atlas')]*/);
     const frameNames = scene.anims.generateFrameNames(
       'atlas',
       {
         start: 1,
-        end: 2,
+        end: 4,
         zeroPad: 4,
-        prefix: 'sea/idle/',
+        prefix: 'ball/idle/',
         suffix: '.png'
       }
     );
 
-    console.log(frameNames);
-
     scene.anims.create({
-      key: 'idle',
+      key: 'idle1',
       frames: frameNames,
-      frameRate: 3,
-      repeat: true
+      frameRate: 5,
+      repeat: -1,
+      yoyo: true
     });
 
-    super(scene, x, y, 'sea/idle/0001.png');
+    super(scene, x, y, 'ball/idle/0001.png');
 
-    scene.add.existing(this).play('idle');
+    scene.add.existing(this).play('idle1');
   }
 }

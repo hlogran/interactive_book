@@ -1,6 +1,7 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev')
@@ -37,7 +38,13 @@ module.exports = {
       template: path.join(__dirname, '../index.ejs'),
       title: appHtmlTitle,
       minify: false
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets',
+        to  : 'assets'
+      }
+    ])
   ],
   module: {
     rules: [
@@ -51,6 +58,7 @@ module.exports = {
           compact: false
         }
       },
+      /*
       // STYLES
       {
         test: /\.css$/,
@@ -103,9 +111,9 @@ module.exports = {
         include: scenesApp,
         exclude: dirNode,
         options: {
-          name: '[path][name].[ext]',
-          context: 'src',
-          outputPath: 'assets'
+          name: '[name].[ext]',
+          context: 'src/scenes',
+          outputPath: 'resources'
         }
       },
       //JSON
@@ -116,13 +124,14 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]',
+              name: '[name].[ext]',
               context: 'src',
-              outputPath: 'assets'
+              outputPath: 'resources'
             }
           }
         ]
       },
+      */
       // RAW
       {
         test: [ /\.vert$/, /\.frag$/ ],
