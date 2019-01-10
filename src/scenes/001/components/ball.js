@@ -21,7 +21,7 @@ export default class extends Phaser.GameObjects.Sprite {
       yoyo: true
     });
 
-    super(scene, x, y, 'ball/idle/0001.png');
+    super(scene, x, y/*, 'ball/idle/0001.png'*/);
 
     scene.add.existing(this).play('idle1');
   }
