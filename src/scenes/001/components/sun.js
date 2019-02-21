@@ -6,24 +6,23 @@ export default class extends Phaser.GameObjects.Sprite {
       'atlas',
       {
         start: 1,
-        end: 4,
+        end: 2,
         zeroPad: 4,
-        prefix: 'ball/idle/',
+        prefix: 'sun/idle/',
         suffix: '.png'
       }
     );
-    console.log('frameNames', frameNames)
-
+console.log('frameNames', frameNames)
     scene.anims.create({
-      key: 'idle1',
+      key: 'idle2',
       frames: frameNames,
-      frameRate: 5,
+      frameRate: 2,
       repeat: -1,
       yoyo: true
     });
 
-    super(scene, x, y/*, 'ball/idle/0001.png'*/);
+    super(scene, x, y);
 
-    scene.add.existing(this).play('idle1');
+    scene.add.existing(this).play('idle2');
   }
 }

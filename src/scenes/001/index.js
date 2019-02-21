@@ -1,5 +1,5 @@
 import { Scene } from '../../framework';
-import { sea, ball } from './components';
+import { sea, ball, sun } from './components';
 import atlas from '../../assets/001/images/atlas.json';
 
 const KEY = '001';
@@ -25,6 +25,12 @@ export default class extends Scene {
     this.ball.scaleX = this.ball.scaleY;
     //this.container.add(this.ball);
     this.ball.play('idle1');
+
+    this.sun = new sun(this, this.sys.canvas.width / 2, this.sys.canvas.height / 2);
+    this.sun.displayHeight = this.sys.canvas.height;
+    this.sun.scaleX = this.sun.scaleY;
+    //this.container.add(this.sun);
+    this.sun.play('idle2');
   }
 
   update () {
